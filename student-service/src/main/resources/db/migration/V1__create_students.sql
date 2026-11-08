@@ -1,0 +1,13 @@
+CREATE TABLE students (
+  id BIGSERIAL PRIMARY KEY,
+  roll_no VARCHAR(20) UNIQUE NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(120) UNIQUE NOT NULL,
+  branch VARCHAR(40) NOT NULL,
+  cgpa NUMERIC(3,2) NOT NULL,
+  backlogs INTEGER NOT NULL DEFAULT 0,
+  graduation_year INTEGER NOT NULL,
+  version BIGINT NOT NULL DEFAULT 0,
+  created_at TIMESTAMPTZ,
+  updated_at TIMESTAMPTZ
+);

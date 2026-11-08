@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: api-gateway
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+jwt:
+  # demo secret, must be at least 32 characters; use an environment variable in real deployments
+  secret: placement-demo-secret-key-change-me-0123456789
+  expiration-minutes: 60
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+
